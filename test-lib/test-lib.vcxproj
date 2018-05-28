@@ -20,19 +20,19 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{1D76D48C-A46F-491C-9351-026EE17DBCAF}</ProjectGuid>
-    <RootNamespace>mainproject</RootNamespace>
+    <ProjectGuid>{72F99421-193B-45DC-AC26-F1E91AEFE86D}</ProjectGuid>
+    <RootNamespace>testlib</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -115,15 +115,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="test-lib.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="test-dll\test-dll.vcxproj">
-      <Project>{ed75add1-b4ac-422f-835d-55a84d7fa7ad}</Project>
-    </ProjectReference>
-    <ProjectReference Include="test-lib\test-lib.vcxproj">
-      <Project>{72f99421-193b-45dc-ac26-f1e91aefe86d}</Project>
-    </ProjectReference>
+    <ClInclude Include="test-lib.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
